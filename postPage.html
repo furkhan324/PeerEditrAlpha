@@ -1,0 +1,129 @@
+<template name="postPage">
+
+  {{#with currentPost}}
+
+
+  <link rel="icon" href="https://launchrock-assets.s3.amazonaws.com/favicon-files/Y6XAR0PU_1406515288117.png?_=0" /> 
+  <link rel="stylesheet" href="http://bootswatch.com/paper/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans:600italic,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans:600italic,400|Roboto|Fjalla+One' rel='stylesheet' type='text/css'>
+
+  
+  
+  {{>header}}
+
+  <link rel="stylesheet" href="http://materializecss.com/dist/css/materialize.min.css"> 
+  <div class="row" style="margin-left:20px;margin-right:60px;margin-top:80px;">
+   <div class="col-sm-12" style="">
+     <div class="well " style="width:100%;">
+      
+       <blockquote style="padding-top:4px; ">
+         <h2 style="color:#34495e">{{title}}</h2>
+         <p>By {{author}} {{submittedText}}</p>       </blockquote>
+
+         
+         
+       </div></div>
+       
+     </div>
+     
+     <div class="row" style="margin-left:20px;padding-top:4px; ">
+      
+      <div class="col-sm-7">
+        
+        <iframe class="panel" style="margin-left:5px;margin-top:5px;" frameborder="0"  src="{{url}}" width="98%" height="800"></iframe></div>
+        
+        
+        <div class="col-sm-4">
+          <div class="panel" style="margin-left:20px;">
+            <ul class="nav nav-tabs" style="margin:5px;">
+              <li class="active"><a href="#home" data-toggle="tab">Description</a></li>
+              <li><a href="#profile" data-toggle="tab">PeerEdit</a></li>
+
+
+            </ul>
+            <div id="myTabContent" class="tab-content" style="margin:10px;margin-bottom:15px;">
+              <div class="tab-pane fade active in" id="home">
+               <div class="panel-body"><div>
+                <div> <img src="{{logo}}" style="margin-bottom:10px;margin-left:10px;" class="img-square pull-right" height="35px" width="45px"> </div><div style="padding-right:45px">
+                <p> <a style="font-weight:thicker; font-size:15px;">{{author}} {{submittedText}} -</a>
+                 {{desc}}</p></div></div>
+                 <hr>
+                 <div>{{>upvote}}<div class="pull-right" style="font-size:10px;"><i class="fa fa-thumbs-up" style="margin-right:15px;">    {{votes}} Upvotes</i><i class="fa fa-thumbs-down"> 11 PeerEdits</i>
+                 </div></div>
+               </div>
+             </div>
+             <div class="tab-pane fade" id="profile">
+              
+              {{#if currentUser}}
+              {{> commentSubmit}}
+
+              
+              
+
+              
+              {{/if}}
+              
+              
+              
+            </div>
+            <div class="tab-pane fade" id="dropdown1">
+              <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
+            </div>
+            <div class="tab-pane fade" id="dropdown2">
+              <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
+            </div>
+          </div></div>
+          
+          
+          
+          
+
+          <div class="list-group panel"  style="margin-left:20px;overflow-y: scroll; height:510px;">
+           <ul class="nav nav-tabs" style="margin:5px;">
+            <li class="active"><a href="#home" data-toggle="tmab" style="font-size:16px;">PeerEdits</a></li>
+
+
+
+          </ul>       {{#each comments}}
+          
+          {{> comment}}
+
+          {{/each}}                  
+          
+          
+          
+        </div>        
+        
+        
+        
+ <!--                     
+<div class="panel" style="margin-left:20px;">
+    <div class="panel-heading" style="color:#2980b9">Leave a PeerEdit...</div>
+    <div class="panel-body">
+                      <div class="form-group" style="margin:10px;margin-right:10px;">
+     <div >
+        <textarea class="form-control" rows="1" id="textArea" style="margin: 0px -3.84375px 10px 10px;margin-bottom:20px;margin-right:10px;  height: 97px;font-size:13px;" placeholder="What could have been done better? What was well done throughout the content? What would you like to see more as a reader?"></textarea>
+         <button class="btn btn-xs pull-right btn-primary">PeerEdit</button>
+         
+      </div>
+    </div>
+</div>
+
+                      </div>  
+                    -->
+                    
+
+                    
+                    
+                    
+                  </div>
+                  
+                  
+                  
+                  
+                </div>
+                {{/with}}
+              </template>

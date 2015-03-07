@@ -1,0 +1,25 @@
+
+<template name="postsList">
+  <div class="col-sm-6">
+    <div class="posts">
+      {{#masonryContainer columnWidth=115 transitionDuration=".6s" gutter=40 id="MasonryContainer" }}
+      
+
+      {{#each posts}}
+      {{#masonryElement "MasonryContainer"}}
+      {{> postItem}}
+      {{/masonryElement}}
+      {{/each}}
+      {{/masonryContainer}}
+    </div>
+    {{#if postsReady}}
+    {{#unless allPostsLoaded}}
+    <form>
+      <button type="submit" style="width:100%;margin-bottom:80px; color:#7f8c8d;" class="load-more btn btn-default" href="#">Load more</button></form>
+      {{/unless}}
+      {{else}}
+      <div>{{> spinner}}</div>
+      {{/if}}
+    </div>
+    
+  </template>

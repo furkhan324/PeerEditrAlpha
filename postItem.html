@@ -1,0 +1,14 @@
+<template name="postItem">
+	<div class="panel panel-default">
+		<div class="panel-heading" style="color:#fff;background:#2c3e50">    {{title}}       {{#if ownPost}}<a href="/posts/{{_id}}/postEdit">Edit</a>{{/if}}<span class="label label-{{status}} pull-right">{{status}}</span></div>
+		<div class="panel-body"><div>
+			<div> <img src="{{logo}}" style="margin-bottom:10px;margin-left:10px;" class="img-square img-rounded pull-right " height="50px" width="45px"> </div><div style="padding-right:45px">
+			<p> <a style="font-weight:thicker; font-size:15px;" href="posts/{{_id}}">{{author}} {{submittedText}}</a>
+				{{desc}}</p></div></div>
+				<hr>
+				
+				<div><a href="posts/{{_id}}" class="btn btn-{{status}} btn-sm pull-left" style="margin-right:5px">PeerEdit</a>{{>upvote}}<div class="pull-right"><i class="fa fa-thumbs-up" style="margin-right:15px;">    {{votes}}  Upvotes</i><i class="fa fa-thumbs-down"> {{commentsCount}} PeerEdits</i>
+				</div></div>
+			</div>
+		</div>   
+	</template>

@@ -1,0 +1,130 @@
+<head>
+ <title>PeerEditr - Get the feedback you deserve.</title> 
+
+
+ <link rel="icon" href="https://launchrock-assets.s3.amazonaws.com/favicon-files/Y6XAR0PU_1406515288117.png?_=0" /> 
+ <link rel="stylesheet" href="http://bootswatch.com/paper/bootstrap.min.css">
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+ <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans:600italic,400' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans:600italic,400|Roboto|Fjalla+One' rel='stylesheet' type='text/css'>
+ <link rel="stylesheet" href="http://materializecss.com/dist/css/materialize.min.css"> 
+ <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+ <script src="http://bootswatch.com/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+ <script src="http://bootswatch.com/assets/js/bootswatch.js"></script>
+ <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+ <script src="http://materializecss.com/bin/materialize.js"></script>
+ <script src="http://materializecss.com/templates/starter-template/js/init.js"></script>
+
+
+</head>
+
+<body>
+
+
+</body>
+
+<template name="hello">
+ <link rel="icon" href="https://launchrock-assets.s3.amazonaws.com/favicon-files/Y6XAR0PU_1406515288117.png?_=0" /> 
+ <link rel="stylesheet" href="http://bootswatch.com/paper/bootstrap.min.css">
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+ <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans:600italic,400' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans:600italic,400|Roboto|Fjalla+One' rel='stylesheet' type='text/css'>
+ <link rel="stylesheet" href="http://materializecss.com/dist/css/materialize.min.css"> 
+ <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+ 
+ <script src="http://bootswatch.com/assets/js/bootswatch.js"></script>
+ <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+ <script src="http://materializecss.com/bin/materialize.js"></script>
+ <script src="http://materializecss.com/templates/starter-template/js/init.js"></script>
+
+
+ {{>header}}
+
+ <br><br><br><br>
+ <div class="col-sm-3"> <div class="well">
+   <center><h4>Welcome!</h4></center>
+
+
+   <center><div>{{userr}}</div></center>
+   <center> <div class="btn btn-md btn-primary" style="margin:10px;">Manage Credits</div></center>
+   {{>loginButtons}}
+   {{>notifications}}
+ </div></div>
+ {{>postsList}}
+ <div class="col-sm-3" style=""> <div class="list-group">
+  <a href="#" class="list-group-item active" style="">
+    What's New?
+  </a>
+  <li class="list-group-item">
+    <span class="badge">14</span>
+    Competitons
+  </li>
+  <li class="list-group-item">
+    <span class="badge">2</span>
+    Essays and Papers
+  </li>
+  <li class="list-group-item">
+    <span class="badge">1</span>
+    Application Responses
+  </li>
+  <a href="#" class="list-group-item">Scripts
+  </a>
+  <a href="#" class="list-group-item">Code Reviews
+  </a>
+
+</div>  <div>
+<link rel="stylesheet" href="http://materializecss.com/dist/css/materialize.min.css"> 
+<a style="position:fixed;margin-top:11%;margin-left:18%;" href="/postSubmit" data-toggle="modal" class="btn-floating btn-large waves-effect waves-light red" ><i style="" class="fa fa-plus"></i></a></div>
+
+</div>
+
+
+
+</template>
+<template name="header">
+ <nav style="" class="navbar navbar-inverse navbar-fixed-top" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <link href='http://bootswatch.com/yeti/bootstrap.min.css' rel='stylesheet' type='text/css'>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a href="/" class="navbar-brand" ><i><img style="padding-bottom:0px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAFdklEQVRIDXVWW4hVVRj+1tqXs2fOmbHsOBkOYqhgmV18yeih9KFEUsLAkiSlfMkKX8J5KDF6SCJ8qoi0u5gFQ4UE9uBDqUX4IEQghqPNqCPCOdMcp5kz57L3Xn3/v/dOJfo5a+9//ffbXuug++cWC0Ln3Aabdiesc842v3hOabXBJfoWfj3H6wsWX6ctyPgFrc59gYuOgNgzgnTOPWH9Ow/B+nNS2QvUqoPWRFFEdA0cHnfASgrPh0HEfcMZN2KcOcH9EZoagTOojo+ofi13Po97gjVx/XPrV7cqU7y6dBKznzwTzrz6x0bbFww5uGWACRkS7UlMdJe/YExK+hSJR4i/Tfxsdfx8WmO28/gmPcvE0VPaPAWvsipNJodt0vhqIL36y77Wu9HG7jEbwaNNj64YqdG8RZVApwWBwQl+kewhcoarl0fiwpGWSx5p41vEY88DtjQA4x8y1n8UobPxKYvZDzykZ6leEjs0pmmIF4Ia19zA0glrivZ2G2Pek4R733gNPdu3kZcmt8RXdk25xuEKnH+QghskagETUrJr0Dlq0PrIg5sgPcrLRpaKSRk1RcmWOsZM0cEL7M+w2JAkOFF/T8XuPrSnyzvocp0aFwfip5M5C59M0XcwRvhUArDSLhYB/fGVyaheVs9+Ot/LSVuY01Jb/3k76qf2DjbGo52N8YqfdDmhliHlDZbo0KKpskPPUILK/hje3ex3O5YoNRsRuQmcW8Lpe6V54FMdd9ttnIH1gk3Gw/zOTICJ0T7MTHBKVZMPCZRLSzhj4C0GKgfaiHY8oFmpoAqLUOYqUzFbuJsrFDu48YyM2npJ2+Sf2XQtwl+j/eg0fVhtNrXFgGgnbbjJRxBtXodw7XL2jCVkmSQrDYYi+b5KbI32ZPy7eysuxEoNgoLSRGaFJLaYvFRBY7yMNJEARILNSBaxVw/DNa6h9OwqmB5f0lQ9CrCtfIg/Y8jAgNBs6eXmouDjdigcF0pEmaD00NJZezpA/fwcNCdFxIdrPk0Ds1Q1sAN9CNbfz2xkEjKgFWEVoB8kC+Qq3onYll5qwjvZ5XCTQuNZrSkvJeSauhogbmyjvppRNmbYm80PwtzaC5fSuGQk5gWVN4EZpVQ3LYQmlciDDzsId83CXkzgyjRHmgi7tIM5c1fDD9lHniRa0jxa0xsi2vIQS8gApTdiSH65F+0J47pCJJUySRa2liJ8s4Xg/TZMl9wgRtSzFL3lu+iNhvIPVRqtBjnKnceWY/r2fk5bkQmNZUFYzYTHQZ1tHZHo1IAczAHg/cqPb6iJ8KcS+gdWA8wMZZ4tZfYmCnga+BwQizbf218/iN1jl+BzL841IyefLZqSiS/HM++KH0i4R71TRiOkI7Qd7GfXMHP8MOzieZwkGq9EMH1cfFu+R5MY106P4WKnhd+4VgQltc6QpmnhOBd8OS3p7Wt638EwerXewsnLYThxydgEkgs1of4H7mAFDvXchjZXQB0dJw0Uxyh8QRRYHPqEOc3ncIYLmaDly1GPnIDlkSVlCjh+XLKHb+HReJmikrwAu9WgvXcUJ088QK9MYxYSPUqJZRSiD2WJhvzUp8hKhsVG6boXBuUzXD6at6qXz+8RqoDeyXKb8aIZ5f5Fzh4vH1EQNkFmsfBHI9Ivba7wxKgycwEjR4L5kmufsAuw4qD4k0BHP9LKVuqdLQTEWW6CJLpXu0IRRuFdpVt87id5J5c0HcUprFJy8culXxvk3XyZTnkX8KjeTeYmWur/t0RF4De/Y24vUHYP7X7DQDvi4EbIQ7mRlOH1pSvkQOHBhM1ca7kGuW4EMXaa6zDX91yN6rnfdbhEt8BJvw7y0chO/sIUVMELutAKvKAX+0L+/97/AMxPhoB+3iOoAAAAAElFTkSuQmCC"></i>
+
+        PeerEditr
+      </a>   
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <link rel="stylesheet" href="http://bootswatch.com/paper/bootstrap.min.css">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home <span class="sr-only">(current)</span><i class="fa fa-home" style="margin-left:4px;"></i></a></li>
+        <li><a href="/postSubmit/">Submit<i class="fa fa-plus" style="margin-left:4px;"></i></a></li>
+        <script src="http://bootswatch.com/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <li rel="dropdown">
+          {{>notifications}}
+        </li>
+
+      </ul>
+
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control"  style="margin-bottom:25px;width:500px;" placeholder="Search">
+        </div>
+
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><i class="fa fa-user"></i>{{>loginButtons}}</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+</template>

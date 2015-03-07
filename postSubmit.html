@@ -1,0 +1,61 @@
+<template name="postSubmit">
+ 
+ <link rel="icon" href="https://launchrock-assets.s3.amazonaws.com/favicon-files/Y6XAR0PU_1406515288117.png?_=0" /> 
+ <link rel="stylesheet" href="http://bootswatch.com/paper/bootstrap.min.css">
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+ <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans:600italic,400' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans:600italic,400|Roboto|Fjalla+One' rel='stylesheet' type='text/css'>
+ {{>header}}
+
+ <br><br><br>
+
+ <div class="col-sm-6 ">
+    <h1>Get the feedback you deserve!</h1>
+    <p>Simply host your document on any hosting service and link the document. Choose whether to make it  open or invite-based access.  </p>
+    <form class="main form-horizontal well">
+        <div class="control-group">
+            <label class="control-label" for="url">Link to Document</label>
+            <div class="controls">
+                <input name="url" type="text" value="" placeholder="Your URL"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="url">Link to Thumbnail</label>
+            <div class="controls">
+                <input name="logo" type="text" value="" placeholder="URL to Thumbnail"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="title">Title</label>
+            <div class="controls">
+                <input name="title" type="text" value="" placeholder="Name your p
+                ost"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="title">Status</label>
+            <div class="controls">
+                <input name="status" type="text" value="" placeholder="Name your p
+                ost"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="message">Description</label>
+            <div class="controls">
+                <textarea name="desc" type="text" value=""></textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <input type="submit" value="Submit" class="btn btn-primary"/>
+            </div>
+        </div>
+    </form></div>
+    
+    <div class="col-sm-6">
+        <div class="well" style="margin-top:10px;"> <h3>Preview</h3></div>
+        
+        <iframe frameborder="0" src="http://mohammedabdulwahhab.me" class="panel" style="margin-left:2px;margin-top:5px;"  width="100%" height="800"></iframe>
+    </div>
+</template>
