@@ -20,7 +20,7 @@ if (postAttributes.url && postWithSameLink) {
 		postWithSameLink._id);
 }
 // pick out the whitelisted keys
-var post = _.extend(_.pick(postAttributes, 'title','url','status', 'logo','desc'), {
+var post = _.extend(_.pick(postAttributes, 'title','url','status', 'logo','desc','category'), {
 	userId: user._id,
 	author: user.profile.name,
 	submitted: new Date().getTime(),

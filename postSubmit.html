@@ -12,40 +12,49 @@
 
  <div class="col-sm-6 ">
     <h1>Get the feedback you deserve!</h1>
-    <p>Simply host your document on any hosting service and link the document. Choose whether to make it  open or invite-based access.  </p>
+    <p><strong>Simply host your document on any hosting service,link the document, and submit.</strong> Why links? Links are the unifying language of the internet. Any work that can be linked can be accessed by PeerEdit! </p>
+    <a href="http://drive.google.com"> <img src="http://www.userlogos.org/files/logos/Diamond00744/drive1.png" height="150px" width="200px"/></a>
+     <a href="http://dropbox.com"> <img src="https://www.educationquest.org/wp-content/uploads/2013/10/dropbox-logo-235x300.png" height="150px" width="130px" /></a>
+     <a href="https://onedrive.live.com/about/en-us/">       <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/anasequea/images/440598/6198261_orig.png" /></a>
+
     <form class="main form-horizontal well">
-        <div class="control-group">
-            <label class="control-label" for="url">Link to Document</label>
-            <div class="controls">
-                <input name="url" type="text" value="" placeholder="Your URL"/>
-            </div>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="url">Link to Thumbnail</label>
-            <div class="controls">
-                <input name="logo" type="text" value="" placeholder="URL to Thumbnail"/>
-            </div>
-        </div>
+
+        
         <div class="control-group">
             <label class="control-label" for="title">Title</label>
             <div class="controls">
-                <input name="title" type="text" value="" placeholder="Name your p
-                ost"/>
+                <input name="title" type="text" value="" placeholder="Name your post"/>
             </div>
         </div>
-        <div class="control-group">
-            <label class="control-label" for="title">Status</label>
-            <div class="controls">
-                <input name="status" type="text" value="" placeholder="Name your p
-                ost"/>
-            </div>
-        </div>
-        <div class="control-group">
+     <div class="control-group">
             <label class="control-label" for="message">Description</label>
             <div class="controls">
                 <textarea name="desc" type="text" value=""></textarea>
             </div>
         </div>
+                <div class="control-group">
+            <label class="control-label" for="url">Link to Document</label>
+            <div class="controls">
+                <input name="url" id="myURL" type="text" value="" placeholder="http:// (Be sure to test the link on the left)"/>
+            </div>
+           
+        </div>
+  
+         <div class="control-group">
+        <label class="control-label" for="category">Category</label>
+        <div class="controls">
+    <select id="category"  class="form-control">
+    <optgroup label="Categories">
+        <option>Competitons (e.g ISEF, DECA...)</option>
+        <option>Essays and Papers (e.g Lab Reports, English Essays, Mathematical Proofs, projects...)</option>
+        <option>Application Responses(e.g College Apps/Essays, Summer Program Application reponses, Resumes,...)</option>
+        <option>Code Reviews(e.g websites, algorithms,other CS related works...)</option>
+        
+    </optgroup>
+</select>
+        </div>
+    </div>
+   
         <div class="control-group">
             <div class="controls">
                 <input type="submit" value="Submit" class="btn btn-primary"/>
@@ -54,8 +63,19 @@
     </form></div>
     
     <div class="col-sm-6">
-        <div class="well" style="margin-top:10px;"> <h3>Preview</h3></div>
-        
-        <iframe frameborder="0" src="http://mohammedabdulwahhab.me" class="panel" style="margin-left:2px;margin-top:5px;"  width="100%" height="800"></iframe>
+        <div class="well" style="margin-top:10px;"> <h3>Preview</h3>
+         <button class="btn btn-primary btn-lg" onclick="myFunction()">Test Link</button>
+        </div>
+     
+     <script>
+function myFunction() {
+    var x = document.getElementById("myURL").value;
+    if(x===""){
+        alert("Please input a Link to Document before testing the preview!");
+    }
+    document.getElementById("frame").src = x;
+}
+</script>
+        <iframe id="frame" frameborder="0" src="" class="panel" style="margin-left:2px;margin-top:5px;"  width="100%" height="800"></iframe>
     </div>
 </template>

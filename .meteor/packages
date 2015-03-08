@@ -9,8 +9,8 @@ iron:router
 accounts-password
 accounts-facebook
 accounts-twitter
-accounts-ui
 percolate:paginated-subscription
 sacha:spin
 multiply:iron-router-progress
 voodoohop:masonrify
+ian:accounts-ui-bootstrap-3
