@@ -1,7 +1,22 @@
-<template name="commentSubmit">
-	<form>
+<!-- <template name="commentSubmit">
+	<form name="comment" class="comment-form">
 		<textarea  name="body" class="form-control" rows="3" id="textArea" style="font-size:13px;" placeholder="What was done well? What could be improved?What was not in the work that you would like to see added ..."></textarea>
 
-		<button type="submit" class="btn  btn-{{status}}" style="margin-top:10px;margin-bottom:5px;">PeerEdit</button>
+		<button type="submit" class="btn  btn-{{status}}" style="margin-top:10px;margin-bottom:5px;">Add Feedback</button>
 	</form>
+</template> -->
+<template name="commentSubmit">
+  <form name="comment" class="comment-form">
+    <div class="control-group">
+        <div class="controls">
+            <label for="body">Give Feedback</label>
+            <textarea  name="body" class="form-control" rows="3" id="textArea" style="font-size:13px;" placeholder="What was done well? What could be improved?What was not in the work that you would like to see added ..."></textarea>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <button type="submit" class="btn">Add Feedback</button>
+        </div>
+    </div>
+  </form>
 </template>

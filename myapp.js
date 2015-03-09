@@ -109,19 +109,39 @@ if (Meteor.isClient) {
  
  
  
- Template.commentSubmit.events({
-  'submit form': function(event, template) {
-    event.preventDefault();
-    console.log("this was clicked");
+//  Template.commentSubmit.events({
+//   'submit form': function(event, template) {
+//     event.preventDefault();
+//     console.log("this was clicked");
+//     var comment = {
+//       body: $(event.target).find('[name=body]').val(),
+//       postId: template.data._id
+//     };
+//     Meteor.call('comment', comment, function(error, commentId) {
+//       error && throwError(error.reason);
+//     });
+//   }
+// });    
+
+Template.commentSubmit.events({
+  'submit form': function(e, template) {
+    e.preventDefault();
+    
+    var $body = $(e.target).find('[name=body]');
     var comment = {
-      body: $(event.target).find('[name=body]').val(),
+      body: $body.val(),
       postId: template.data._id
     };
+    
     Meteor.call('comment', comment, function(error, commentId) {
-      error && throwError(error.reason);
+      if (error){
+        throwError(error.reason);
+      } else {
+        $body.val('');
+      }
     });
   }
-});    
+});
  
  
  
