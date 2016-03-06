@@ -6,9 +6,5 @@ PeerEditr is a web platform written in meteor.js that aims to crowdsource feedba
   - Invite friends to peeredit your work
   -Minimal and simple UI
 [See the live version]:http://www.peereditr.com
-,mw gv,
-evm f
-kfffe
-fee
-f
+
 e
